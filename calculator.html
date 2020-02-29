@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <!-- <script src="/script/todolist.js"></script> -->
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Calculator</title>
+</head>
+<body>
+ <input id="firstNumber"> +
+ <input id="secondNumber"> 
+ <button id="calcBtn">Calculate</button>
+ <div><p>Answer: <span id="answerArea">0</span></p>
+ </div>
+
+
+<script>
+
+let sum1 = document.getElementById("firstNumber")
+let sum2 = document.getElementById("secondNumber");
+let calcBtn = document.getElementById("calcBtn");
+let answerArea = document.getElementById("answerArea");
+
+function calculate() {
+ let result = Number(firstNumber.value) + Number(secondNumber.value);
+ answerArea.innerHTML = result;
+  console.log(result);
+}
+calcBtn.addEventListener('click', calculate);
+
+
+</script>
+
+</body>
+</html>

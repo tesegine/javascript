@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+ <h1>Todo List</h1>
+ <input id="newItem" type="text" placeholder="Todolist">
+ <button id="addbutton">Add</button>
+ <div>
+  <ol id="allItems">
+  </ol>
+ </div>
+ <script>
+  console.log('Hi world')
+let newItem = document.getElementById('newItem');
+let addbtn = document.getElementById('addbutton');
+let allItems = document.getElementById("allItems")
+
+function onAddItem() {
+ // alert("I never see alert oo");
+ // prompt(newItem.value);
+ // let newTodo = newItem.value;
+ // let previousAllItems = allItems.innerHTML;
+
+ // if (newTodo.trim() == "") {
+ //  return;
+ // }else {
+ //  allItems.innerHTML = allItems.innerHTML + "<li>" + newTodo;
+
+ }
+ function validate(){
+  addbtn.disabled = newItem.value.trim() == "";
+  // if (newItem.value.trim() == "") {
+  //  addbtn.disabled = true;
+  // }else {
+  //  addbtn.disabled = false;
+  }
+addbtn.addEventListener("click", validate);
+ </script>
+ <script src="./script/todolist.js">
+ </script>
+</body>
+</html>

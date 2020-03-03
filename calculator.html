@@ -7,10 +7,17 @@
  <title>Calculator</title>
 </head>
 <body>
- <input id="firstNumber"> +
+ <input id="firstNumber"> 
+ <select id="dropdown">
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="/">/</option>
+  <option value="*">*</option>
+</select>
  <input id="secondNumber"> 
  <button id="calcBtn">Calculate</button>
  <div><p>Answer: <span id="answerArea">0</span></p>
+
  </div>
 
 
@@ -20,13 +27,36 @@ let sum1 = document.getElementById("firstNumber")
 let sum2 = document.getElementById("secondNumber");
 let calcBtn = document.getElementById("calcBtn");
 let answerArea = document.getElementById("answerArea");
+let dropdown = document.getElementById("dropdown")
 
-function calculate() {
- let result = Number(firstNumber.value) + Number(secondNumber.value);
- answerArea.innerHTML = result;
-  console.log(result);
+
+function handleCalculate(){
+let answer = 0
+if(dropdown.value == "+") {
+  answer = Number(firstNumber.value) + Number(secondNumber.value);
+} 
+else if (dropdown.value == "-") {
+  answer = Number(firstNumber.value) - Number(secondNumber.value);
+} 
+else if (dropdown.value == "/") {
+  answer = Number(firstNumber.value) / Number(secondNumber.value);
+} 
+else if (dropdown.value == "*") {
+  answer = Number(firstNumber.value) * Number(secondNumber.value);
 }
-calcBtn.addEventListener('click', calculate);
+answerArea.innerHTML = answer;
+}
+
+calcBtn.addEventListener('click', handleCalculate);
+
+
+// function calculate() {
+//  let result = Number(firstNumber.value) + Number(secondNumber.value);
+//  answerArea.innerHTML = result;
+//   console.log(result);
+// }
+
+
 
 
 </script>
